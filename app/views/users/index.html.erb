@@ -1,0 +1,16 @@
+<h1>Users#index</h1>
+<p>Find me in app/views/users/index.html.erb</p>
+
+<!--ここにユーザーの一覧を表示するらしい-->
+<!--データベースのデータの表示は、Tweetのバージョンでは下のようになっている(要改善)-->
+
+<%= @users.each do |e| %>
+    <p>
+        <li>
+            <%= e.uid %>
+            <%=link_to '削除', "/users/#{e.id}" , data: { turbo_method: :delete } %>
+        </li>
+    </p>
+<% end %>
+
+<%= link_to "新規登録" ,users_new_path %>
