@@ -1,0 +1,13 @@
+<h1>Tweets#index</h1>
+<p>Find me in app/views/tweets/index.html.erb</p>
+
+<%= @tweets.each do |e| %>
+    <p>
+        <li>
+            <%= e.message %>
+            <%=link_to '削除', "/tweets/#{e.id}" , data: { turbo_method: :delete } %>
+        </li>
+    </p>
+<% end %>
+
+<%= link_to "新規登録" ,tweets_new_path %>
