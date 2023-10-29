@@ -1,5 +1,5 @@
 <%= form_tag tweets_create_path, method: :post, data: { turbo: false } do %>
-    <%= label_tag :message, 'ツイート' %>
+    <%= label_tag :message, '本文' %>
     <%= text_field_tag :message %>
-    <%= submit_tag '登録' %>
+    <%= submit_tag 'ツイート' %>
 <% end %>

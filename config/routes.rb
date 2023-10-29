@@ -1,9 +1,8 @@
 Rails.application.routes.draw do
-  get 'tops/main'
-  get 'tops/login'
-  get 'tops/logout'
-  post 'top/login'
+  get 'top/main'
+  get 'top/login'
   get 'top/logout'
+  post 'top/login'
   
   get 'tweets/index'
   get 'tweets/new'
