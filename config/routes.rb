@@ -1,4 +1,10 @@
 Rails.application.routes.draw do
+  get 'likes/create'
+  get 'likes/destroy'
+  post 'likes/:id' ,to: 'likes#create'
+  delete 'likes/:id' ,to: 'likes#destroy'
+  resources :likes
+  
   get 'top/main'
   get 'top/login'
   get 'top/logout'
