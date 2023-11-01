@@ -2,7 +2,7 @@ require 'bcrypt'
 
 class TopController < ApplicationController
   def main
-    if session[:login_uid] != nil
+    if current_user != nil
       render "main"
     else
       render "login"
